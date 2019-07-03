@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+:root {
+  --accentTheme: #fad390;
+}
 
 * {
   margin: 0;
@@ -8,11 +11,69 @@
   font: inherit;
   font-family: "Montserrat", sans-serif;
   vertical-align: baseline;
+  color: black;
 }
 
 .nav {
-  background: #82ccdd;
-  padding: 20px;
+  background: var(--accentTheme);
+  padding: 30px;
+  font-weight: bold;
   color: white;
   text-transform: uppercase;
+}
+
+.card {
+  border: 1px solid var(--accentTheme);
+}
+
+.card-header {
+  background: var(--accentTheme);
+}
+
+hr {
+  background: var(--accentTheme);
+}
+
+.btn {
+  color: black;
+}
+
+.orderList {
+  padding: 20px;
+}
+
+.option {
+  margin: 0 5px;
+  background: var(--accentTheme);
+  border: 0;
+}
+
+.option:hover {
+  background: #f6b93b;
+}
+
+.amountPaid {
+  color: #f6b93b;
+  float: right;
+  font-weight: bold;
+  border: 1px solid var(--accentTheme);
+  padding: 10px;
+}
+
+.itemList {
+  padding: 0 20px;
+}
+
+.address {
+  display: flex;
+}
+
+.badge {
+  margin-right: 10px;
+  background: black;
+  color: white;
+  padding: 4.5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 }
