@@ -18,8 +18,8 @@ router.get("/", async (req, res) => {
   try {
     const collection = db.get().collection("orders");
     const result = await collection.find().toArray();
-    console.log(result.length);
-    res.send(`${result.length} results fetched`);
+    console.log(`${result.length} results fetched`);
+    res.send(result);
   } catch (error) {
     console.error(error.message);
     res.status(500).send("Server error");
