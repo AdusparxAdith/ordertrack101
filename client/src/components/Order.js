@@ -1,5 +1,5 @@
 import React from "react";
-import EditPage from "./components/EditPage";
+import EditPage from "./EditPage";
 import Moment from "react-moment";
 
 const Order = ({ order, number }) => {

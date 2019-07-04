@@ -3,7 +3,7 @@ const router = express.Router();
 const ObjectId = require("mongodb").ObjectID;
 const db = require("../../config/db");
 
-router.get("/:id/:type/:value", async (req, res) => {
+router.put("/:id/:type/:value", async (req, res) => {
   try {
     const type = req.params.type;
     const value = req.params.value;

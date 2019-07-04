@@ -8,8 +8,8 @@ const EditForm = ({ text, id, collapseThis }) => {
     const field = text.split(" ")[1];
     const value = form;
     console.log(id);
-    const result = await axios.get(
-      `https://4eb23786.ngrok.io/api/update/${id}/${field}/${value}`
+    const result = await axios.put(
+      `https://ordertrack101.herokuapp.com/api/update/${id}/${field}/${value}`
     );
     console.log(result);
     window.location.reload();
