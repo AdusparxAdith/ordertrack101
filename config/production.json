@@ -1,0 +1,3 @@
+{
+  "mongoURI": "mongodb+srv://adusparx:adusparx@merncluster-rzfpa.mongodb.net/shopify?retryWrites=true&w=majority"
+}
