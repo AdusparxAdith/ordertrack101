@@ -5,15 +5,18 @@ import axios from "axios";
 import "./App.css";
 
 function App() {
+  // State contains all orders from the DB
   const [orders, setOrders] = useState([]);
 
   const getOrders = async () => {
     const result = await axios.get(
       " https://ordertrack101.herokuapp.com/api/orders"
     );
+
     setOrders(result.data);
   };
 
+  // Hook that calls getOrders on component Mount
   useEffect(() => {
     getOrders();
   }, []);

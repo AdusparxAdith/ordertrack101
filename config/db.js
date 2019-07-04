@@ -1,10 +1,11 @@
 const MongoClient = require("mongodb").MongoClient;
-var collection;
 
+//DB instance to be shared accross app
 var state = {
   db: null
 };
 
+//Connection function
 exports.connect = function(dbURL, done) {
   if (state.db) return done();
 
@@ -16,10 +17,12 @@ exports.connect = function(dbURL, done) {
   });
 };
 
+//Get DB instance function
 exports.get = function() {
   return state.db;
 };
 
+//Close DB instance function
 exports.close = function(done) {
   if (state.db) {
     state.db.close(function(err, result) {

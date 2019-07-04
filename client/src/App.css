@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+/* GLOBAL VALUES */
+
 :root {
   --accentTheme: #fad390;
 }
@@ -14,6 +17,8 @@
   color: black;
 }
 
+/* NAVBAR */
+
 .nav {
   background: var(--accentTheme);
   padding: 30px;
@@ -21,6 +26,8 @@
   color: white;
   text-transform: uppercase;
 }
+
+/* CARDS */
 
 .card {
   border: 1px solid var(--accentTheme);
@@ -30,9 +37,7 @@
   background: var(--accentTheme);
 }
 
-hr {
-  background: var(--accentTheme);
-}
+/* BUTTONS */
 
 .btn {
   color: black;
@@ -42,6 +47,12 @@ hr {
 .btn-link:visited {
   color: black;
   text-decoration: none;
+}
+
+/* MISCELLANEOUS COMPONENTS */
+
+hr {
+  background: var(--accentTheme);
 }
 
 .orderList {

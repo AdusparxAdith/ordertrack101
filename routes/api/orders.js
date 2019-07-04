@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const db = require("../../config/db");
 
+//@route POST api/orders
+//@desc Receives order details from Shopify Webhook Subscription
 router.post("/", async (req, res) => {
   try {
     const collection = db.get().collection("orders");
@@ -14,6 +16,8 @@ router.post("/", async (req, res) => {
   }
 });
 
+//@route GET api/orders
+//@desc Retrieves all orders from Mongo orders Collection
 router.get("/", async (req, res) => {
   try {
     const collection = db.get().collection("orders");
