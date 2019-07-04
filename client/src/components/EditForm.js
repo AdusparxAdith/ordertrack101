@@ -1,11 +1,18 @@
 import React, { useState } from "react";
+import axios from "axios";
 
-const EditForm = ({ text, id }) => {
+const EditForm = ({ text, id, collapseThis }) => {
   const [form, setForm] = useState("");
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     const field = text.split(" ")[1];
     const value = form;
+    console.log(id);
+    const result = await axios.get(
+      `https://4eb23786.ngrok.io/api/update/${id}/${field}/${value}`
+    );
+    console.log(result);
+    window.location.reload();
   };
 
   return (
@@ -30,7 +37,8 @@ const EditForm = ({ text, id }) => {
           <button
             type="button"
             className="btn btn-secondary option"
-            data-dismiss="modal"
+            data-toggle="collapse"
+            data-target={`#${collapseThis}`}
           >
             Close
           </button>

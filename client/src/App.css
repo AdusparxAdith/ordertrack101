@@ -38,6 +38,12 @@ hr {
   color: black;
 }
 
+.btn-link:hover,
+.btn-link:visited {
+  color: black;
+  text-decoration: none;
+}
+
 .orderList {
   padding: 20px;
 }

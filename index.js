@@ -15,6 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 app.use("/api/orders", require("./routes/api/orders"));
+app.use("/api/update", require("./routes/api/update"));
 
 app.get("/", (req, res) => {
   res.send("Server is running");

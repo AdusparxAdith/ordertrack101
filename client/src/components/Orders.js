@@ -3,11 +3,11 @@ import Order from "../Order";
 const Orders = ({ orders }) => {
   return (
     <div>
+      <center>
+        <p>{orders.length} Orders</p>
+      </center>
       {orders.map((order, i) => (
         <div className="container orderList" key={order._id}>
-          <center>
-            <p>{orders.length} Orders</p>
-          </center>
           <Order order={order} number={i} />
         </div>
       ))}

@@ -8,7 +8,7 @@ function App() {
   const [orders, setOrders] = useState([]);
 
   const getOrders = async () => {
-    const result = await axios.get(" https://4309bb80.ngrok.io/api/orders");
+    const result = await axios.get(" https://4eb23786.ngrok.io/api/orders");
     setOrders(result.data);
   };
 

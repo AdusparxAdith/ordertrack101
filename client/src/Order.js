@@ -1,18 +1,19 @@
 import React from "react";
-import Modal from "./components/Modal";
+import EditPage from "./components/EditPage";
 import Moment from "react-moment";
 
 const Order = ({ order, number }) => {
   return (
     <div className="card">
       <div className="card-header">
-        <span className="badge">{number + 1}</span>Order ID: {order.name}
+        <span className="badge">{number + 1}</span>Order ID: {order.name}{" "}
+        {order._id}
       </div>
       <div className="card-body">
         <h5>Contact Details: </h5>
         <hr />
-        <p className="card-text">{order.customer.email}</p>
-        <p className="card-text">{order.customer.phone}</p>
+        <p className="card-text">{order.email}</p>
+        <p className="card-text">{order.phone}</p>
         <h5>Purchased Items: </h5>
         <hr />
         <div className="card">
@@ -52,14 +53,18 @@ const Order = ({ order, number }) => {
         </div>
         <br />
 
-        <Modal
-          text={order.customer.email ? "Edit Email" : "Add email"}
-          id={order._id}
-        />
-        <Modal
-          text={order.customer.phone ? "Edit phone" : "Add phone"}
-          id={order._id}
-        />
+        <div className="accordion" id="accordionExample">
+          <EditPage
+            text={order.email ? "Edit email" : "Add email"}
+            id={order._id}
+            collapseThis={"collapseOne"}
+          />
+          <EditPage
+            text={order.phone ? "Edit phone" : "Add phone"}
+            id={order._id}
+            collapseThis={"collapseTwo"}
+          />
+        </div>
       </div>
       <div className="card-footer text-muted">
         Ordered on:{" "}
